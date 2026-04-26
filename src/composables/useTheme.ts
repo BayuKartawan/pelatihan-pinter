@@ -36,7 +36,7 @@ export function useTheme() {
   function cycleTheme() {
     const order: Theme[] = ['light', 'dark', 'system']
     const idx = order.indexOf(theme.value)
-    theme.value = order[(idx + 1) % order.length]
+    theme.value = order[(idx + 1) % order.length] as Theme
   }
 
   return { theme, setTheme, cycleTheme }
